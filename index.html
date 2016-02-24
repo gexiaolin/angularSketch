@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sketch">
+<head>
+	<meta charset="UTF-8">
+	<title>sketch</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="sketchController">
+	<div id="items">
+		<h3 class="title">简易画板</h3>
+		<ul class="style">
+			<li ng-repeat="(key, value) in style" ng-click="styleClick($index)" ng-class="{on:styleIndex == $index}">{{value}}
+			</li>
+			<input type="color" ng-model='strokeColor' class = 'strokeColor'>
+			<input type="color" ng-model='fillColor' class='fillColor'>
+		</ul>
+		<ul class="tools">
+			<li ng-repeat="value in tools.name" ng-click="name($index)" ng-class="{on:toolsIndex == $index}">{{value}}</li>
+		</ul>
+		<div class="width">画笔尺寸
+			<input type="range" style='margin-left: 20px' min='1' max='21' step='2' ng-model='width'>
+		</div>
+		<div class="canvasW">画布宽度
+			<input type="range" min="400" max="1088" step="16" ng-model="canvasSize.width" style='margin-left: 20px'>
+		</div>
+		<div class="canvasH">画布高度
+			<input type="range" min="400" max="662" step="2" ng-model="canvasSize.height" style='margin-left: 20px'>
+		</div>
+		<ul class="else">
+			<li>
+				<a ng-click="clearSketch($event)">清空画布</a>
+			</li>
+			<li>
+				<a ng-click="save($event)">保存</a>
+			</li>
+		</ul>
+	</div>
+	<canvas id="canvas" width="{{canvasSize.width}}" height="{{canvasSize.height}}"></canvas>
+	<script src="js/angular.js"></script>
+	<script src="js/sketch.js"></script>
+</body>
+</html>

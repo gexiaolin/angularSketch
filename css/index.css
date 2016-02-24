@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+}
+body{
+	font-family: '微软雅黑';
+	color: #fff;
+	font-size: 20px;
+}
+#items{
+	box-sizing: border-box;
+	width: 20%;
+	background: #383836;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+#canvas{
+	border: 2px solid #333;
+	position: absolute;
+	left: 20%;
+	margin-left: 1px;
+}
+.title{
+	height: 44px;
+	border-bottom: 2px solid #ccc;
+	line-height: 44px;
+	font-weight: 400;
+	padding-left: 20px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.style{
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	position: relative;
+	border-bottom: 2px solid #ccc;
+}
+.style li{
+	padding-left: 20px;
+	height: 44px;
+	line-height: 44px;
+	font-weight: 100;
+	color: rgba(255,255,255,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.style li:hover{
+	color: #ff2968;
+	padding-left: 30px;
+}
+li{
+	color: #fff;
+	font-size: 20px;
+}
+.tools{
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	border-bottom: 2px solid #ccc;
+}
+.tools li{
+	padding-left: 20px;
+	height: 44px;
+	line-height: 44px;
+	font-weight: 100;
+	color: rgba(255,255,255,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.tools li:hover{
+	color: #ff2968;
+	padding-left: 30px;
+}
+li.on{
+	background: #222;
+	color: #ff2968;
+	padding-left: 30px;
+}
+.strokeColor{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+.fillColor{
+	position: absolute;
+	right: 20px;
+	top: 55px;
+}
+.width,.canvasW,.canvasH{
+	padding-left: 20px;
+	height: 44px;
+	line-height: 44px;
+	font-weight: 100;
+	color: rgba(255,255,255,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	cursor: default;
+}
+.canvasH{
+	border-bottom: 2px solid #ccc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.else{
+	border-bottom: 2px solid #ccc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.else li{
+	padding-left: 20px;
+	height: 44px;
+	line-height: 44px;
+	font-weight: 100;
+	color: rgba(255,255,255,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+.else a{
+	display: block;
+	width: 100%;
+	line-height: 44px;
+	font-weight: 100;
+	color: rgba(255,255,255,0.4);
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+.else li:hover{
+	color: #ff2968;
+}
+.else li a:hover{
+	color: #ff2968;
+	padding-left: 10px;
+}
